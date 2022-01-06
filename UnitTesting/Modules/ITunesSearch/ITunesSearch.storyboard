@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d8s-zC-T2t">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iTunes Search View Controller-->
+        <scene sceneID="4e3-xv-bDR">
+            <objects>
+                <viewController storyboardIdentifier="ITunesSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d8s-zC-T2t" customClass="ITunesSearchViewController" customModule="UnitTesting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wT6-ai-9nW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fue-mU-seb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IFj-I9-EFs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dTQ-KO-pmQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.95234709979999999" green="0.95248371359999995" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nsh-4f-OpI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ITunesHeaderCollectionReusableView" id="iGw-bM-5h1" customClass="ITunesHeaderCollectionReusableView" customModule="UnitTesting" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fue-mU-seb" firstAttribute="top" secondItem="dTQ-KO-pmQ" secondAttribute="bottom" id="Ajx-YN-UKA"/>
+                            <constraint firstItem="dTQ-KO-pmQ" firstAttribute="top" secondItem="wT6-ai-9nW" secondAttribute="bottom" id="dBu-BG-vGn"/>
+                            <constraint firstItem="dTQ-KO-pmQ" firstAttribute="leading" secondItem="IFj-I9-EFs" secondAttribute="leading" id="iYt-wJ-66P"/>
+                            <constraint firstAttribute="trailing" secondItem="dTQ-KO-pmQ" secondAttribute="trailing" id="wp6-Ci-gXW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="i2Z-2f-Val"/>
+                    <connections>
+                        <outlet property="collectionView" destination="dTQ-KO-pmQ" id="U7h-Ci-KEw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqd-wc-fRj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="84"/>
+        </scene>
+    </scenes>
+</document>
